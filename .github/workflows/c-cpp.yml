@@ -14,6 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: make
-      run: gcc cao.c -o cao
+      run: gcc main.c -o cao
     - name: make check
       run: ./cao
