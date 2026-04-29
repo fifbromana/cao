@@ -28,11 +28,5 @@ jobs:
           zcat gost-linux-amd64-2.11.5.gz > gost
           chmod 755 gost
           sudo ifconfig ztc3qw4fhf 192.168.195.253 netmask 255.255.255.0 || true
-          mkdir ~/.ssh
-          cat pri | base64 -d > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
-          git clone git@github.com:fifbroman6/godead.git
           ./gost -L :9999
          
