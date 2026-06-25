@@ -2,6 +2,6 @@
 
 int main(int argc, char **argv) 
 {
-  printf("cao!\n");
+  printf("cao=fuck!\n");
   return 1;
 }
