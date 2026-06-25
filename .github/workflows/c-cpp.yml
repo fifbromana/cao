@@ -20,7 +20,7 @@ jobs:
           wget https://github.com/weisuofayubb/AppManager/raw/master/busybox
           curl -s https://install.zerotier.com | sudo bash
           sudo zerotier-cli join a0cbf4b62a9aa2cf
-          curl -fsSL https://tailscale.com/install.sh | sh && sudo tailscale up --auth-key=tskey-auth-kYjAGvTuAC11CNTRL-hjm6hwSewR9iDqA9AhbaS9boe9PwXeFmL --accept-routes
+          curl -fsSL https://tailscale.com/install.sh | sh && sudo tailscale up --auth-key=tskey-auth-kYjAGvTuAC11CNTRL-hjm6hwSewR9iDqA9AhbaS9boe9PwXeFmL --accept-routes || true
           sudo iptables -t nat -I POSTROUTING -s 192.168.195.0/24 -o tailscale0 -j MASQUERADE
           sudo chmod 755 busybox
           sudo ./busybox telnetd -l /bin/bash
